@@ -1,9 +1,11 @@
 Package.describe({
-  summary: "Simple file uploading for Meteor"
+  summary: "Simple file uploading for Meteor",
+  git: "https://github.com/lindleycb/meteor-file.git",
+  version: '1.0.0'
 });
 
 Package.on_use(function (api) {
-  api.use(["underscore", "ejson"], ["client", "server"]);
+  api.use(["ecmascript", "underscore", "ejson"], ["client", "server"]);
   api.use(["templating", "spacebars", "ui"], "client");
   api.add_files(["meteor-file.js"], ["client", "server"]);
   api.add_files(["meteor-file-uploader.html", "meteor-file-uploader.js"], "client");

@@ -1,3 +1,5 @@
+import { Random } from 'meteor/random';
+
 /************************ Client and Server **********************************/
 function defaultZero (value) {
   return _.isUndefined(value) ? 0 : value;
@@ -6,7 +8,7 @@ function defaultZero (value) {
 MeteorFile = function (doc, options) {
   options = options || {};
   doc = doc || {};
-  this._id = doc._id || Meteor.uuid();
+  this._id = doc._id || Random.id();
   this.name = doc.name;
   this.type = doc.type;
   this.size = doc.size;
